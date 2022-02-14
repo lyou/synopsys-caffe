@@ -144,8 +144,7 @@ USER ${USER}
 ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 RUN echo "$PATH"
 
-# Install kernel specs
-RUN jupyter install
+
 
 # Set root to Notebooks
 WORKDIR ${HOME}/Notebooks/
