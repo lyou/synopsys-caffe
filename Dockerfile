@@ -134,11 +134,7 @@ RUN pip3 install notebook jupyterlab
 
 # Copy notebooks
 
-COPY ./NotebookExamples/ ${HOME}/Notebooks/
-
-# Copy package sources
-
-COPY ./NuGet.config ${HOME}/nuget.config
+COPY ./examples/ ${HOME}/Notebooks/
 
 RUN chown -R ${NB_UID} ${HOME}
 USER ${USER}
