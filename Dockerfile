@@ -1,9 +1,7 @@
 FROM ubuntu:18.04
 
 
-# install the notebook package
-RUN pip install --no-cache --upgrade pip && \
-    pip install --no-cache notebook jupyterlab
+
 
 
 # Environment variables and args
@@ -131,7 +129,8 @@ RUN echo "$CAFFE_ROOT/build/lib" >> /etc/ld.so.conf.d/caffe.conf && ldconfig
 # Building image END
 
 
-
+# install the notebook package
+RUN pip3 install notebook jupyterlab
 
 # Copy notebooks
 
