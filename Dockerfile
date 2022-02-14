@@ -147,6 +147,7 @@ RUN echo "$PATH"
 
 # hack for scipy bug 
 RUN pip3 uninstall -y scipy &&  pip3 install scipy
+RUN pip3 uninstall -y pyyaml &&  pip3 install pyyaml
 
 # Set root to Notebooks
 WORKDIR ${HOME}/Notebooks/
