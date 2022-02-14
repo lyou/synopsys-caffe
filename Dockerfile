@@ -145,9 +145,10 @@ ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 
 RUN echo "$PATH"
 
-# hack for scipy bug 
+# hack for bug inside Notebooks 
 RUN pip3 uninstall -y scipy &&  pip3 install scipy
 RUN pip3 uninstall -y pyyaml &&  pip3 install pyyaml
+RUN apt-get install -y python3-yaml
 
 # Set root to Notebooks
 WORKDIR ${HOME}/Notebooks/
