@@ -1,9 +1,5 @@
 FROM ubuntu:18.04
 
-
-
-
-
 # Environment variables and args
 
 ARG NB_USER=root
