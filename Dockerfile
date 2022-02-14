@@ -1,5 +1,8 @@
 FROM ubuntu:18.04
 
+# dummy to force refresh binder service to re-build docker image.
+RUN ls -all
+
 # Environment variables and args
 
 ARG NB_USER=root
@@ -19,8 +22,7 @@ RUN apt-get update
 # With curl, you can download or upload data using HTTP, HTTPS, SCP, SFTP, and FTP.
 RUN apt-get install -y curl
 
-# dummy to force refresh binder service to re-build docker image.
-RUN ls -all
+
 
 # Install .NET CLI dependencies
 RUN apt-get install -y --no-install-recommends \
