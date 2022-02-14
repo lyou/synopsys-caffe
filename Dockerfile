@@ -145,7 +145,7 @@ ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 RUN echo "$PATH"
 
 # hack for scipy bug 
-RUN pip3 uninstall scipy &&  pip3 install scipy
+RUN pip3 uninstall -y scipy &&  pip3 install scipy
 
 # Set root to Notebooks
 WORKDIR ${HOME}/Notebooks/
