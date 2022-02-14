@@ -148,4 +148,4 @@ RUN echo "$PATH"
 RUN pip3 uninstall -y scipy &&  pip3 install scipy
 
 # Set root to Notebooks
-WORKDIR ${HOME}/Notebooks/
+WORKDIR ${HOME}/Notebooks/examples
