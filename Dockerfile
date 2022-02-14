@@ -5,11 +5,11 @@ RUN ls -all
 
 # Environment variables and args
 
-ARG NB_USER=root
-ARG NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
+ARG NOTEBOOK_USER=root
+ARG NOTEBOOK_UID=1000
+ENV USER ${NOTEBOOK_USER}
+ENV NOTEBOOK_UID ${NOTEBOOK_UID}
+ENV HOME /home/${NOTEBOOK_USER}
 
 WORKDIR ${HOME}
 
@@ -137,7 +137,7 @@ RUN pip3 install notebook jupyterlab
 
 COPY ./examples/ ${HOME}/Notebooks/
 
-RUN chown -R ${NB_UID} ${HOME}
+RUN chown -R ${NOTEBOOK_UID} ${HOME}
 USER ${USER}
 
 
