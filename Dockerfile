@@ -6,7 +6,7 @@ FROM ubuntu:18.04
 
 # Environment variables and args
 
-ARG NB_USER=jovyan
+ARG NB_USER=root
 ARG NB_UID=1000
 ENV USER ${NB_USER}
 ENV NB_UID ${NB_UID}
