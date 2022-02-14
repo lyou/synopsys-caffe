@@ -135,7 +135,7 @@ RUN pip3 install notebook jupyterlab
 
 # Copy notebooks
 
-COPY ./examples/ ${HOME}/Notebooks/
+COPY ./ ${HOME}/Notebooks/
 
 RUN chown -R ${NOTEBOOK_UID} ${HOME}
 USER ${USER}
