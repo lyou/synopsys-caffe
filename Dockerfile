@@ -1,4 +1,10 @@
-FROM jupyter/scipy-notebook:a6fc0cfbd01b
+FROM ubuntu:18.04
+
+
+# install the notebook package
+RUN pip install --no-cache --upgrade pip && \
+    pip install --no-cache notebook jupyterlab
+
 
 # Environment variables and args
 
