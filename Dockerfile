@@ -147,8 +147,7 @@ RUN echo "$PATH"
 
 # hack for bug inside Notebooks 
 RUN pip3 uninstall -y scipy &&  pip3 install scipy
-RUN pip3 uninstall -y pyyaml &&  pip3 install pyyaml
-RUN apt-get install -y python3-yaml
+RUN pip3 uninstall -y pyyaml &&  python3 -m pip install pyyaml
 
 # Set root to Notebooks
 WORKDIR ${HOME}/Notebooks/
